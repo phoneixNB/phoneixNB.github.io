@@ -150,6 +150,134 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/26/CSS%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Phoneix">
+      <meta itemprop="description" content="分享日常学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phoneix的小窝">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/26/CSS%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">CSS基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-26 15:42:48" itemprop="dateCreated datePublished" datetime="2021-08-26T15:42:48+08:00">2021-08-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-27 15:59:07" itemprop="dateModified" datetime="2021-08-27T15:59:07+08:00">2021-08-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS:"></a>CSS:</h1><h3 id="层叠样式表，用来美化网页。做到结构（html）和表现（CSS）分离"><a href="#层叠样式表，用来美化网页。做到结构（html）和表现（CSS）分离" class="headerlink" title="层叠样式表，用来美化网页。做到结构（html）和表现（CSS）分离"></a>层叠样式表，用来美化网页。做到结构（html）和表现（CSS）分离</h3><h4 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h4><p>选择器{</p>
+<p>属性：属性值；</p>
+<p>}</p>
+<h4 id="CSS引用方式：行间样式，内部样式，外部样式，导入外部样式"><a href="#CSS引用方式：行间样式，内部样式，外部样式，导入外部样式" class="headerlink" title="CSS引用方式：行间样式，内部样式，外部样式，导入外部样式"></a>CSS引用方式：行间样式，内部样式，外部样式，导入外部样式</h4><p>行间样式：直接在标签上书写样式</p>
+<p>内部样式：在文件的内部书写样式</p>
+<style>
+    样式内容：举例p标签
+    p{内容}
+</style>
+
+<p>外部样式：（1）先创建一个CSS文件（2）再用link标签引入这个文件</p>
+<p>导入外部样式：（1）先创建一个CSS文件；（2）在style标签中用import导入这                    </p>
+<p>​                                     个样式文件。</p>
+<p>以上四种区别：行间用于当前标签：内部用于当前文件：外部样式可以被多个HTMl引用。在实际项目开发中，最好使用外部样式。外部样式分为，link引入和import引用。我们更多的使用link</p>
+<h4 id="CSS选择器分类："><a href="#CSS选择器分类：" class="headerlink" title="CSS选择器分类："></a>CSS选择器分类：</h4><p>（1)*：匹配html中所有元素，*号的性能非常差，因为他要匹所有元素，所以不建议使用</p>
+<p>（2）：标签选择器：用来匹配对应的标签</p>
+<p>（3）：类选择器：是用来选择匹配class命名的标签</p>
+<p>（4）：id选择器：用来选择用id命名的标签</p>
+<p>（5）：派出选择器，根据上下文来确定选择的标签</p>
+<p>（6）：伪类选择器</p>
+<h4 id="CSS选择器分组：让多个选择器（元素）具有相同的样式，一般用于设置公共样式。"><a href="#CSS选择器分组：让多个选择器（元素）具有相同的样式，一般用于设置公共样式。" class="headerlink" title="CSS选择器分组：让多个选择器（元素）具有相同的样式，一般用于设置公共样式。"></a>CSS选择器分组：让多个选择器（元素）具有相同的样式，一般用于设置公共样式。</h4><h4 id="CSS选择器继承：子元素可以继承父元素的样式，反之不成。"><a href="#CSS选择器继承：子元素可以继承父元素的样式，反之不成。" class="headerlink" title="CSS选择器继承：子元素可以继承父元素的样式，反之不成。"></a>CSS选择器继承：子元素可以继承父元素的样式，反之不成。</h4><h4 id="CSS优先级：外部样式-lt-内部样式-lt-嵌入样式"><a href="#CSS优先级：外部样式-lt-内部样式-lt-嵌入样式" class="headerlink" title="CSS优先级：外部样式&lt;内部样式&lt;嵌入样式"></a>CSS优先级：外部样式&lt;内部样式&lt;嵌入样式</h4><h4 id="样式权重：-important-10000-gt-内联样式（1000）-gt-id选择器（100）-gt-类和伪类（10）-gt-标签（1）"><a href="#样式权重：-important-10000-gt-内联样式（1000）-gt-id选择器（100）-gt-类和伪类（10）-gt-标签（1）" class="headerlink" title="样式权重：!important(10000)&gt;内联样式（1000）&gt;id选择器（100）&gt;类和伪类（10）&gt;标签（1）"></a>样式权重：!important(10000)&gt;内联样式（1000）&gt;id选择器（100）&gt;类和伪类（10）&gt;标签（1）</h4><h4 id="CSS字体："><a href="#CSS字体：" class="headerlink" title="CSS字体："></a>CSS字体：</h4><p>font-size:字号</p>
+<p>font-family:字体</p>
+<p>font-style:文字样式：normal:默认值，italic：斜体，oblique：倾斜的字体</p>
+<p>font-weight:文字加粗：normal：正常，bold：加粗,bolder：比bold粗，lighter，比normal细，{100-900},400=normal,700=bold</p>
+<p>line-height:行高</p>
+<p>color:文字颜色</p>
+<p>text-decoration:文字修饰,nomal:默认值，underline：下划线，line-through:贯穿线；overline：上划线</p>
+<p>text-align:文本对齐方式</p>
+<p>text-transform:字母大小写：capitalize：将每一个单词的第一个字母转化成大写，uppercase：转化成大写，lowercase：转化成小写</p>
+<p>text-indent:设置文本首行文本缩进</p>
+<p>font-variant：normal/small-caps(让大写字母小一些)</p>
+<p>tip：</p>
+<p>font复合属性</p>
+<p>​      font：font-style font-variant font-weight font-size/line-height font-family</p>
+<p>（1）注意属性值的位置顺序</p>
+<p>   (2) 除了font-size和font-family，其他属性值都可以省略</p>
+<h4 id="CSS背景："><a href="#CSS背景：" class="headerlink" title="CSS背景："></a>CSS背景：</h4><p>1）background-color：背景色(transparent/color)</p>
+<p>2）background-image：背景图（none/url）</p>
+<p>3）background-repeat：背景图像铺排方式</p>
+<p>（repeat/no-repeat/repeat-x/repeat-y）</p>
+<p>4）background-position：设置对象的背景图像位置</p>
+<p>  (x-number,top,center,bottom)</p>
+<p>  (y-number,left,cencter,right)</p>
+<p>5）background-attachment：背景图像滚动位置scroll/fixed</p>
+<p>6）background：设置背景的复合写法：</p>
+<p>background：color image repeat attachment position</p>
+<p>CSS伪类选择器</p>
+<p>伪类：专门用来表示元素的一种特殊状态。</p>
+<p>常用的伪类选择器：</p>
+<p>​           a标签的伪类：</p>
+<p>​                   :link/:visited/:hover/:active</p>
+<p>​          :focus获得焦点</p>
+<p>​          :first-child/:last-child/:nth-child(number)</p>
+<h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><p>[属性名]：包含有指定属性名的元素（常用）</p>
+<p>[属性名=值]：属性名的值为指定值的元素（常用）</p>
+<p>[属性名~=值]：属性名的值包含指定值的元素</p>
+<p>[属性名^=值]：属性名的值以指定值的开头的元素</p>
+<p>[属性名$=值]：属性名的值为指定值的结尾的元素</p>
+<h4 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h4><p>1）空格：后代选择器</p>
+<p>2）&gt;：只选择儿子</p>
+<p>3）+：兄弟选择器</p>
+<h4 id="CSS伪元素"><a href="#CSS伪元素" class="headerlink" title="CSS伪元素"></a>CSS伪元素</h4><p>:before/:after/:fist-letter/:first-line:前面可以是一个冒号，也可以两个</p>
+<p>::selection/::placeholder/::backdrop:前面只能是双冒号</p>
+<p>content用于before和after中的文本插入。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/25/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -466,7 +594,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
