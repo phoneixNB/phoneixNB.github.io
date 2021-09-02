@@ -150,6 +150,138 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/29/css%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80&%E7%9B%92%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Phoneix">
+      <meta itemprop="description" content="分享日常学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phoneix的小窝">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/29/css%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80&%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">css浮动布局</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-29 13:47:43" itemprop="dateCreated datePublished" datetime="2021-08-29T13:47:43+08:00">2021-08-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-02 22:43:37" itemprop="dateModified" datetime="2021-09-02T22:43:37+08:00">2021-09-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="float什么是浮动"><a href="#float什么是浮动" class="headerlink" title="float什么是浮动"></a>float什么是浮动</h1><p>浮动就是让块级标签不独占一行。目的：把块级标签元素可以排在一行上。</p>
+<h1 id="浮动的原理"><a href="#浮动的原理" class="headerlink" title="浮动的原理"></a>浮动的原理</h1><p>就是让元素脱离文档流，不占用标准流</p>
+<h1 id="float的属性值："><a href="#float的属性值：" class="headerlink" title="float的属性值："></a>float的属性值：</h1><p>left：左浮动</p>
+<p>right：右浮动</p>
+<p>none：默认值，不浮动</p>
+<h3 id="浮动后，后面的元素不管是块级还是行级元素不会显示在下一行"><a href="#浮动后，后面的元素不管是块级还是行级元素不会显示在下一行" class="headerlink" title="浮动后，后面的元素不管是块级还是行级元素不会显示在下一行"></a>浮动后，后面的元素不管是块级还是行级元素不会显示在下一行</h3><h1 id="清除浮动：让后面的元素可以自动调到下一行"><a href="#清除浮动：让后面的元素可以自动调到下一行" class="headerlink" title="清除浮动：让后面的元素可以自动调到下一行"></a>清除浮动：让后面的元素可以自动调到下一行</h1><p>方法：</p>
+<p>1）添加空标签，并设置样式：</p>
+<p>​            clear：both：清除左右浮动</p>
+<p>​            clear：left：清除左浮动</p>
+<p>​            clear：right：清除右浮动</p>
+<p>​            clear：none：左右浮动都不清除</p>
+<p>2）在要清除浮动的父级添加样式：overflow：hidden；</p>
+<p>​      overflow：hidden；超出部分隐藏，也可以用来实现清除浮动</p>
+<p>3）在要清除浮动的父级添加伪元素，并设定样式：</p>
+<p>​              父元素：after{</p>
+<p>​                                      content=” “；</p>
+<p>​                                      display：block；</p>
+<p>​                                       clear：both；</p>
+<p>​                                          }</p>
+<p>在实际开发中，我们一般首选第二种方案，</p>
+<h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><p>每个元素都是一个盒子，一个盒子由margin外边距，border边框，padding内边距，content内容组成</p>
+<p>区别外边距和外边距是以边框为参照，系统默认外边距是8px</p>
+<p>1）外边距（margin）：指元素边框线之外的距离</p>
+<p>margin：可以带1—4个参数，用来设置所有边距：1个表示上下左右，2个表示                      </p>
+<p>​                上下为参数1，左右为参数2。3个表示上为参数1，下为参数2，左右为 </p>
+<p>​                参数3。4个表示上右下左</p>
+<p>margin-left：左边距</p>
+<p>margin-right：右边距</p>
+<p>margin-top：上边距</p>
+<p>margin-bottom：下边距         </p>
+<p>2）内边距（padding）：指的是元素的文本内容与边框之间的距离</p>
+<p>​      用法与margin一样</p>
+<h1 id="display属性："><a href="#display属性：" class="headerlink" title="display属性："></a>display属性：</h1><p>用来设置元素的显示方式</p>
+<p>属性值：</p>
+<p>none：不显示元素；</p>
+<p>block：块显示，在元素前后设置换行符，将行级标签转化为块级标签（因为行级标签不识别宽高，而块级标签识别，转化后也可以设置宽高了）</p>
+<p>inline：行内显示，将块级标签转化为行级标签。</p>
+<p>inline-block：将块级或行级标签转化为行内块级标签（这是代表在行内也可以识别宽高了）</p>
+<h1 id="table样式"><a href="#table样式" class="headerlink" title="table样式"></a>table样式</h1><p>table一般不用来布局，主要用来格式化数据。</p>
+<h3 id="table属性："><a href="#table属性：" class="headerlink" title="table属性："></a>table属性：</h3><p>width：宽度</p>
+<p>height：高度</p>
+<p>border-collapse：collapse：单线边框</p>
+<p>border：边框线</p>
+<h3 id="td，tr属性："><a href="#td，tr属性：" class="headerlink" title="td，tr属性："></a>td，tr属性：</h3><p>width：宽度</p>
+<p>height：高度</p>
+<p>border：边框线</p>
+<p>text-align：文本左右对齐方式</p>
+<p>vertical-align：文本垂直对齐方式</p>
+<h1 id="CSS列表样式："><a href="#CSS列表样式：" class="headerlink" title="CSS列表样式："></a>CSS列表样式：</h1><p>不是描述性文本的仍和内容都可以认为是列表。比如：菜单，商品列表</p>
+<p>1）列表类型</p>
+<p>​      无序（ul）：</p>
+<p>​      有序（ol）：</p>
+<p>​      自定义列表（dl）：</p>
+<p>ul和ol的列表项都是用li表示的，而dl是由一个dt和一个或多个dd组成的。</p>
+<p>dl一般用来设置一个定义，比如名词解释。dt：标题，dd：描述，用来对dt的内容解释说明的。</p>
+<p>2）样式（用来修改标识类型）</p>
+<p>list-style-image：用图像来表示标识</p>
+<p>list-style-positioon：标识的位置</p>
+<p>​                           属性值：inside：占用文本,outside（默认值）：不占用文本</p>
+<p>list-style-type：标识的类型</p>
+<p>​                           属性值：a）无序</p>
+<p>​                                                  disc（默认值）/circle/square/none</p>
+<p>​                                           b）有序</p>
+<p>​                                                  decimal/decimal-leading-zero/</p>
+<p>​                                                  lower-roman/upper-roman/lower-alpha/</p>
+<p>​                                                  upper-alpha/lower-greek/lower-latin</p>
+<p>​                                            c）有序和无序都有none</p>
+<p>简写：list-style：他的值可以按照任意顺序列出，可以任意省略。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/26/CSS%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -301,10 +433,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-08-25 14:47:19 / 修改时间：14:48:16" itemprop="dateCreated datePublished" datetime="2021-08-25T14:47:19+08:00">2021-08-25</time>
+              <time title="创建时间：2021-08-25 14:47:19" itemprop="dateCreated datePublished" datetime="2021-08-25T14:47:19+08:00">2021-08-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-30 18:56:19" itemprop="dateModified" datetime="2021-08-30T18:56:19+08:00">2021-08-30</time>
+              </span>
 
           
 
@@ -594,7 +732,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
